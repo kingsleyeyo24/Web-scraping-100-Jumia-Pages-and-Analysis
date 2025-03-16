@@ -80,3 +80,111 @@ Lastly, this line saves all the extracted product details into our products list
 If we scrape too fast, Jumia might block our access. Hence, I added this code for 2 seconds delay before moving to the next page.
 
 ![Image](https://github.com/user-attachments/assets/0659d0a9-9c3e-4049-aa1c-fc8e102ec552)
+
+### Convert Data to DataFrame
+
+Created a structured table (DataFrame) from the scraped product data using pandas.
+
+![Image](https://github.com/user-attachments/assets/44531c56-ee82-4d3c-bef3-c22f10cbf83c)
+
+### Save to CSV
+
+I saved the scraped product data as a CSV file named "jumia_products_computing.csv".
+
+![Image](https://github.com/user-attachments/assets/2357177e-8285-4b8c-80c6-49fd08066091)
+
+### Data Wrangling
+
+Earlier, I mentioned that I needed to scrape data from two categories: Computing and Phones & Tablets. After completing the scraping, I then had to load the Phones & Tablets data into the notebook.
+
+![Image](https://github.com/user-attachments/assets/c903336e-9dcd-4918-b692-e148d5fde50d)
+
+I created a new column, "Category", in the comp_df DataFrame and sets its value to "Computing" for all rows. This ensures that when merging DataFrames, each product retains its category for clear identification. (Did the same for Phones & Tablets)
+
+![Image](https://github.com/user-attachments/assets/b51e26ea-9b3f-471f-bddd-acd69ce5a98d)
+
+I made use of .loc[:, "Category"] to add a new column, "Category", to the phones_df DataFrame and assigns "Phones & Tablets" to all rows to ensure the assignment applies directly to phones_df, avoiding issues like chained assignment warnings.
+
+![Image](https://github.com/user-attachments/assets/757d4e80-01f9-462b-bd0c-d6cede7b680f)
+
+### Key Processing Steps
+1. Merge DataFrames
+Combines comp_df and phones_df into a single dataset for unified analysis.
+Clean Ratings
+
+2. Removes "out of 5" from the Rating column.
+Converts ratings to numerical values and replaces missing values with 0.
+Extract Review Count
+
+3. Extracts the number of reviews from the Reviews column and stores it in a new column (Review Count).
+Converts extracted values to floating-point numbers.
+Drop Redundant Columns
+
+4. Removes the Reviews column since its data is now stored in Review Count.
+Drops the Discount column as it's not needed for further calculations.
+Standardize Price Columns
+
+5. Removes currency symbols (₦) and commas from both Price and Old Price.
+Extracts only numerical values in case of price ranges (e.g., "7488 - 7500").
+Converts prices to floating-point numbers for mathematical operations.
+Calculate Discount Percentage
+
+6. Computes the discount percentage as:
+Old Price
+−
+Price
+Old Price
+×
+100
+Old Price
+Old Price−Price
+​
+ ×100
+Handles cases where old price is 0 to prevent division errors.
+Handle Missing and Infinite Values
+
+7. Replaces any missing values (NaN) in Review Count and Discount % with 0.
+Converts -inf and inf values in Discount % to 0 to maintain data integrity.
+
+![Image](https://github.com/user-attachments/assets/c90aa83e-d1b7-475a-b78d-447d6b616169)
+
+### Exploratory Data Analysis
+
+I started by looping through the dataset, excluding high-cardinality columns, to display unique values in each remaining column, helping identify inconsistencies and ensure data quality.
+
+![Image](https://github.com/user-attachments/assets/a3154393-2471-41da-892b-bbff3cbc3421)
+
+
+To identify the most popular products based on customer engagement, I sorted the dataset by review count. Here, we can pinpoint the items that have received the most feedback.
+
+![Image](https://github.com/user-attachments/assets/021c635c-168a-40a7-bdc8-66b34906b3c0)
+
+Next, I created a bar chart because visual representations make data easier to understand.
+
+![Image](https://github.com/user-attachments/assets/76be5cd6-35ea-4ec0-86a3-30fa284c2e82)
+
+This bar chart displays the top 10 most reviewed products on Jumia Computing & Phones & Tablets category, indicating their popularity based on customer engagement. The Ace Elec 20000 mAh Ultra Slim Portable Power Bank dominates with the highest number of reviews. Power banks make up the majority of the list, implying they are among the most sought-after products. 
+
+I generated summary statistics for the Discount % and Price column in merged_df, rounding the values to two decimal places.
+
+![Image](https://github.com/user-attachments/assets/e54e06c7-8a34-4c78-976c-9582eb457d1b)
+
+Next, I visualized most discounted products
+
+![Image](https://github.com/user-attachments/assets/9e29b3aa-0c17-4f81-b691-7e032e295c96)
+
+This chart showcases the top 10 most heavily discounted products, revealing a trend where certain electronics and accessories receive substantial markdowns, potentially due to promotional campaigns, stock clearance, or competitive pricing strategies aimed at attracting more buyers. It shows high discounts across categories and uniform discount percentage.
+
+### Does Price Affect Rating?
+
+
+
+
+
+
+
+
+
+
+
+
