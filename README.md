@@ -177,14 +177,99 @@ This chart showcases the top 10 most heavily discounted products, revealing a tr
 
 ### Does Price Affect Rating?
 
+I created a scatter plot to analyze the relationship between price and rating.
+
+![Image](https://github.com/user-attachments/assets/366c24ed-da36-4513-97d9-e1899fbb31a6)
+
+There doesn't seem to be a strong correlation between price and rating. The majority of ratings cluster around 4-5 stars regardless of price, and lower-priced items also have a mix of high and low ratings. Additionally, some expensive products have lower ratings, indicating that higher prices do not necessarily guarantee better customer satisfaction.
+
+To confirm, I calculated to check the relationship between product price and customer rating.
+
+![Image](https://github.com/user-attachments/assets/4cdd2434-46fb-4bf8-90ab-ba31f6876afd)
+
+The result is around -0.18, which means there is a very weak negative correlation. In simple terms, as prices increase, ratings tend to slightly decrease, but the effect is very small.
 
 
 
+Next, I calculated to check if products with bigger discounts get more reviews. 
+
+![Image](https://github.com/user-attachments/assets/f353f295-a177-4ad2-a39c-a92876a2c320)
+
+The result is close to zero (0.0075), meaning there is almost no relationship between discount percentage and the number of reviews. Meaning giving discounts doesn’t seem to have a noticeable impact on how many people leave reviews.
+
+I went further to visualize this relationship using a scatter plot.
+
+![Image](https://github.com/user-attachments/assets/271f240e-b647-422a-a026-52992c7b37ef)
+
+The spread of points shows no clear trend, reinforcing the earlier correlation result. This means that higher discounts do not necessarily lead to more reviews, suggesting that other factors influence product popularity and customer engagement.
+
+Next, I used a bar chart to visualize the distribution of product badges.
+
+![Image](https://github.com/user-attachments/assets/a89928dd-8985-4a4d-95a3-9d5cd2305264)
+
+Interesting! It seems that the vast majority of products do not have any special badges. Promotional badges like "Buy Any 2 Get ₦850 Off" and "Pay on Delivery" are much less common, while "Non-returnable" badges are rare. This suggests that most products rely on standard pricing and marketing rather than additional incentives.
+
+Moving on, I visualized the distribution of ratings across different badge types using a box plot. 
+
+![Image](https://github.com/user-attachments/assets/74fe5e39-58e2-4537-ae88-5f62955805c1)
+
+The median ratings are relatively high across all categories, typically around 4.0 or above. Products with "No badges" show a wider spread of ratings, including more low-rated outliers. In contrast, "Pay on Delivery" and "Non-returnable" products have a more concentrated rating range, suggesting more consistent customer experiences. The presence of outliers in "Buy Any 2 Get ₦850 Off" and "No badges" indicates some variability in customer satisfaction for these categories.
+
+I used a bar chart to compare the average discount percentage across two product categories. 
+
+![Image](https://github.com/user-attachments/assets/467b3364-4407-4956-8652-d45dc90ec5d2)
+
+"Phones & Tablets" receive higher average discounts (around 30%) compared to "Computing" products, which have an average discount of about 20%. This suggests that mobile devices and tablets may have more frequent or larger promotional discounts than computing products.
+
+I filtered the dataset to find the best laptop deals. To find laptop listings that mention "Laptop" and "RAM" while excluding accessories like skins, covers, stickers, and stands.
+
+![Image](https://github.com/user-attachments/assets/5b2d4aaf-6bd2-496b-b1b4-75ce76e7666f)
+
+I began by analyzing the most affordable laptops to identify the best deals.
+
+![Image](https://github.com/user-attachments/assets/bd2eb62a-bddc-4e0f-a392-5596d55176d6)
+
+As always, a good analysis is incomplete without a visualization.
+
+![Image](https://github.com/user-attachments/assets/4496bf92-db36-4f3e-a219-aeab79e2af7a)
+
+The key takeaway is that all three laptops have very similar pricing, hovering around ₦140,000. Additionally, they all appear to be variants of the same model—HP Stream 11—suggesting that this particular model offers the lowest-cost option among available laptops. This reinforces that budget-conscious buyers may not have much variety in terms of brand or specifications at the lowest price range.
 
 
+Next, Icompared the top 3 highest-rated laptops based on their price and rating.
+
+![Image](https://github.com/user-attachments/assets/2161e930-cc18-49b1-af33-b42d575ba2c1)
+![Image](https://github.com/user-attachments/assets/244156df-8d37-418f-9752-40d0d07267eb) 
+
+The visualization highlights that the top-rated laptops vary significantly in price, with the HP EliteBook 840 G6 being the most expensive and the HP Stream 11 the most affordable, yet all maintain high ratings, suggesting that both budget and premium options can offer great value and user satisfaction. By extension, HP laptops appear to be the best option, as they dominate the top-rated list across different price ranges, offering both affordability and quality.
+
+I filtered the dataset to find the best phone deals. To find laptop listings that mention "phone" and "RAM" while excluding accessories like cases, protectors, covers, stickers, stands, MagSafe items, and frames.
+
+![Image](https://github.com/user-attachments/assets/fdc1013f-101c-44ee-8317-9ce6f6c56f8d)
+
+I created a visualization to compare the most and least expensive phones in the dataset.
+
+![Image](https://github.com/user-attachments/assets/2a293000-bda9-48dc-989b-9172e1402b16)
+![Image](https://github.com/user-attachments/assets/52d985e8-aaee-4979-9413-8a3f8d548a62)
+
+The top three are high-end Apple iPhones, indicating premium pricing. The lowest-priced options include budget-friendly and refurbished phones like Oppo, Huawei, and children's educational devices. 
+
+Lastly, this chart highlights the top three highest-rated phones based on user reviews, with their prices on the y-axis. The red dots represent scaled ratings. Notably, the Apple iPhone 11 Pro is the most expensive among them, while the other two—Tecno Spark 30C and a children's tablet—are more budget-friendly. This suggests that high ratings are not solely tied to price; even lower-cost devices can receive strong user approval.
+
+![Image](https://github.com/user-attachments/assets/1feb382d-3f77-41a4-84d2-985e3ecec1e9)
 
 
+### Conclusion
 
+For Laptop Buyers
+- HP laptops, particularly the HP Stream series, are great for budget buyers.
+- Buyers seeking high ratings should compare models beyond price, as affordable laptops still receive good reviews.
+- Consider discount percentages when making a purchase, as some models have substantial price reductions.
+
+For Phone Buyers
+- Apple remains the premium option, but Tecno and Oppo provide cost-effective alternatives with decent user ratings.
+- Consumers looking for the best-rated devices should not assume higher prices mean better quality.
+- Buyers should evaluate ratings alongside prices to find the best deals on well-reviewed models.
 
 
 
