@@ -257,6 +257,7 @@ The top three are high-end Apple iPhones, indicating premium pricing. The lowest
 Lastly, this chart highlights the top three highest-rated phones based on user reviews, with their prices on the y-axis. The red dots represent scaled ratings. Notably, the Apple iPhone 11 Pro is the most expensive among them, while the other two—Tecno Spark 30C and a children's tablet—are more budget-friendly. This suggests that high ratings are not solely tied to price; even lower-cost devices can receive strong user approval.
 
 ![Image](https://github.com/user-attachments/assets/1feb382d-3f77-41a4-84d2-985e3ecec1e9)
+![Image](https://github.com/user-attachments/assets/4e203d56-99e4-42e7-81e6-26608db4505c)
 
 
 ### Conclusion
